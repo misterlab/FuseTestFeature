@@ -10,8 +10,9 @@ shutdown -f
 
 # rollback:
 # remove and delete profile from container
-fabric:container-remove-profile child2 mtc-fuse-test
+fabric:container-remove-profile child1 mtc-fuse-test
 fabric:profile-delete mtc-fuse-test
+fabric:container-delete child1
 
 # creation:
 # create a new mtc-fuse-test profile to contain the FuseTest feature
@@ -20,6 +21,8 @@ fabric:profile-create --parents feature-camel-jms mtc-fuse-test
 profile-edit -r mvn:com.mycompany/FuseTestFeature/1.0.0-SNAPSHOT/xml/features mtc-fuse-test
 # add camel-jms feature
 profile-edit --features camel-jms mtc-fuse-test
+# add camel-ftp feature
+profile-edit --features camel-ftp mtc-fuse-test
 # add FuseTestBasic feature to the profile
 profile-edit --features FuseTestBasic mtc-fuse-test
 # deploy mtc-fuse-test profile to container

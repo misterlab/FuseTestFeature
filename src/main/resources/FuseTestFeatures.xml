@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<features name="FuseTestFeatures">
+    <feature name="FuseTestBasic">
+        <bundle>mvn:com.mycompany/mtc-camel-blueprint/1.0.0-SNAPSHOT</bundle>
+    </feature>
+</features>
